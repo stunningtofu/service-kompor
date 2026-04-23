@@ -1,0 +1,42 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  scroll-behavior: smooth;
+}
+
+.whatsapp-float {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  z-index: 50;
+  transition: all 0.2s ease;
+}
+.whatsapp-float:hover {
+  transform: scale(1.07);
+}
+
+.hover-scale {
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.hover-scale:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 20px 25px -12px rgba(0,0,0,0.15);
+}
+
+.hero-badge {
+  background: linear-gradient(135deg, #ec7d10 0%, #f39c4b 100%);
+}
+
+.hero-icon-bg {
+  background: linear-gradient(145deg, #ffffff, #fef3e8);
+  box-shadow: 0 20px 35px -10px rgba(236,125,16,0.25);
+}
+
+.delay-1 { animation-delay: .5s; }
+.delay-2 { animation-delay: 1s; }
+
+.card-gradient {
+  background: linear-gradient(135deg,#ffffff 0%,#fef9f0 100%);
+}
