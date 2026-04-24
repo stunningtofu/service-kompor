@@ -40,3 +40,26 @@ html {
 .card-gradient {
   background: linear-gradient(135deg,#ffffff 0%,#fef9f0 100%);
 }
+
+@keyframes float-icons {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-10px); }
+}
+
+.animate-float-icons {
+  animation: float-icons 4s ease-in-out infinite;
+}
+
+.map-container iframe {
+  width: 100%;
+  height: 300px;
+  border-radius: 1rem;
+  border: none;
+  box-shadow: 0 10px 25px -5px rgba(0,0,0,0.1);
+}
+
+@media (min-width: 768px) {
+  .map-container iframe {
+    height: 350px;
+  }
+}

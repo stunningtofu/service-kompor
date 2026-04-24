@@ -6,6 +6,9 @@ export default function Document() {
       <Head>
         <meta name="description" content="Pangestu Service - Jasa service kompor, lampu LED, alat elektronik (kipas, rice cooker) dan pembuatan nisan di Kediri, Jawa Timur. Bisa panggilan ke rumah atau antar ke tempat kami. Profesional & terpercaya." />
 
+        {/* Font Awesome 6 */}
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{

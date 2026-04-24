@@ -1,65 +1,101 @@
-import { FaFire, FaLightbulb, FaUtensils, FaFan } from 'react-icons/fa'
-import { FaMicrochip } from 'react-icons/fa6'
+import { FaFire, FaLightbulb, FaUtensils, FaFan, FaMapMarkerAlt, FaCheckCircle, FaTools } from 'react-icons/fa'
+import { FaMicrochip, FaFillDrip } from 'react-icons/fa6'
 
 export default function Hero() {
   return (
     <section id="home" className="relative overflow-hidden bg-gradient-to-br from-primaryLight via-white to-orange-50 py-16 md:py-24">
-
+      {/* Dekorasi background */}
       <div className="absolute top-0 right-0 w-64 h-64 bg-primary/5 rounded-full blur-3xl"></div>
       <div className="absolute bottom-0 left-0 w-80 h-80 bg-primary/10 rounded-full blur-3xl"></div>
 
       <div className="container mx-auto px-5 md:px-10 relative z-10">
         <div className="grid md:grid-cols-2 gap-12 items-center">
-
           <div className="space-y-6">
-            <div className="hero-badge text-white px-4 py-2 rounded-full inline-flex items-center gap-2">
+            <div className="inline-flex items-center gap-2 hero-badge text-white px-4 py-2 rounded-full text-sm font-semibold shadow-lg">
+              <FaMapMarkerAlt className="text-white text-xs" />
               <span>Melayani Wilayah Kediri Raya</span>
             </div>
-
-            <h2 className="text-5xl font-extrabold text-gray-800 leading-tight">
-              Service Kompor, LED, Elektronik & Pembuatan Nisan
+            <h2 className="text-4xl md:text-5xl lg:text-6xl font-extrabold text-gray-800 leading-tight">
+              Service Kompor, LED,
+              <span className="text-primary relative inline-block">
+                Elektronik
+                <svg className="absolute -bottom-2 left-0 w-full h-2 text-primary/30" viewBox="0 0 200 8" fill="currentColor">
+                  <path d="M0,4 L200,4" stroke="currentColor" strokeWidth="4" strokeDasharray="6 4"/>
+                </svg>
+              </span>
+              & Pembuatan Nisan
             </h2>
-
-            <p className="text-gray-600 text-lg">
-              Panggilan ke rumah Anda di Kediri atau antar langsung ke tempat kami.
-            </p>
-
-            <a href="https://wa.me/6281234567890"
-              className="bg-primary hover:bg-primaryDark text-white px-7 py-3 rounded-xl shadow-lg">
-              Hubungi WhatsApp
-            </a>
-          </div>
-
-          <div className="hero-icon-bg rounded-3xl p-8 w-80 md:w-96">
-            <div className="grid grid-cols-3 gap-6 text-center">
-
-              <div className="animate-float-icons">
-                <FaFire className="text-primary text-3xl mx-auto"/>
-              </div>
-
-              <div className="animate-float-icons delay-1">
-                <FaLightbulb className="text-yellow-500 text-3xl mx-auto"/>
-              </div>
-
-              <div className="animate-float-icons delay-2">
-                <FaUtensils className="text-primary text-3xl mx-auto"/>
-              </div>
-
-              <div className="animate-float-icons delay-1">
-                <FaFan className="text-primary text-3xl mx-auto"/>
-              </div>
-
-              <div className="animate-float-icons">
-                <FaMicrochip className="text-primary text-3xl mx-auto"/>
-              </div>
-
+            <p className="text-gray-600 text-lg leading-relaxed">Panggilan ke rumah Anda di Kediri (Kota & Kabupaten) atau antar langsung ke tempat kami. Cepat, harga bersahabat, garansi servis, dan sudah berpengalaman 8+ tahun.</p>
+            <div className="flex flex-wrap gap-4 pt-3">
+              <a href="https://wa.me/6281234567890?text=Halo%20Pangestu%20Service%2C%20saya%20mau%20pesan%20layanan%20di%20Kediri" target="_blank" className="bg-primary hover:bg-primaryDark text-white font-bold py-3.5 px-7 rounded-xl shadow-lg transition duration-300 flex items-center gap-2 transform hover:scale-105">
+                <FaUtensils className="text-xl" />
+                Hubungi WhatsApp
+              </a>
+              <a href="#carapesan" className="border-2 border-primary text-primary hover:bg-primary/10 font-semibold py-3.5 px-7 rounded-xl transition duration-300">Cara Pemesanan →</a>
             </div>
-
-            <div className="mt-6 text-center">
-              <p className="text-primary font-bold text-lg">8+ Tahun Pengalaman</p>
+            <div className="flex flex-wrap items-center gap-5 pt-4">
+              <div className="flex items-center gap-2 bg-white/70 backdrop-blur-sm px-4 py-2 rounded-full shadow-sm">
+                <FaCheckCircle className="text-primary text-lg" />
+                <span className="text-sm font-medium">Service datang</span>
+              </div>
+              <div className="flex items-center gap-2 bg-white/70 backdrop-blur-sm px-4 py-2 rounded-full shadow-sm">
+                <FaCheckCircle className="text-primary text-lg" />
+                <span className="text-sm font-medium">Antar barang</span>
+              </div>
+              <div className="flex items-center gap-2 bg-white/70 backdrop-blur-sm px-4 py-2 rounded-full shadow-sm">
+                <FaTools className="text-primary text-lg" />
+                <span className="text-sm font-medium">Garansi servis</span>
+              </div>
             </div>
           </div>
 
+          {/* Side icon animasi (tanpa gambar) */}
+          <div className="relative flex justify-center">
+            <div className="hero-icon-bg rounded-3xl p-8 w-80 md:w-96">
+              <div className="grid grid-cols-3 gap-6 text-center">
+                <div className="animate-float-icons">
+                  <div className="w-16 h-16 bg-primary/10 rounded-2xl flex items-center justify-center mx-auto mb-2">
+                    <FaFire className="text-primary text-3xl" />
+                  </div>
+                  <span className="text-xs text-gray-600 font-medium">Kompor</span>
+                </div>
+                <div className="animate-float-icons delay-1">
+                  <div className="w-16 h-16 bg-primary/10 rounded-2xl flex items-center justify-center mx-auto mb-2">
+                    <FaLightbulb className="text-yellow-500 text-3xl" />
+                  </div>
+                  <span className="text-xs text-gray-600 font-medium">LED</span>
+                </div>
+                <div className="animate-float-icons delay-2">
+                  <div className="w-16 h-16 bg-primary/10 rounded-2xl flex items-center justify-center mx-auto mb-2">
+                    <FaUtensils className="text-primary text-3xl" />
+                  </div>
+                  <span className="text-xs text-gray-600 font-medium">Rice Cooker</span>
+                </div>
+                <div className="animate-float-icons delay-1">
+                  <div className="w-16 h-16 bg-primary/10 rounded-2xl flex items-center justify-center mx-auto mb-2">
+                    <FaFan className="text-primary text-3xl" />
+                  </div>
+                  <span className="text-xs text-gray-600 font-medium">Kipas</span>
+                </div>
+                <div className="animate-float-icons">
+                  <div className="w-16 h-16 bg-primary/10 rounded-2xl flex items-center justify-center mx-auto mb-2">
+                    <FaFillDrip className="text-stone-500 text-3xl" />
+                  </div>
+                  <span className="text-xs text-gray-600 font-medium">Nisan</span>
+                </div>
+                <div className="animate-float-icons delay-2">
+                  <div className="w-16 h-16 bg-primary/10 rounded-2xl flex items-center justify-center mx-auto mb-2">
+                    <FaMicrochip className="text-primary text-3xl" />
+                  </div>
+                  <span className="text-xs text-gray-600 font-medium">Elektronik</span>
+                </div>
+              </div>
+              <div className="mt-6 text-center">
+                <p className="text-primary font-bold text-lg">8+ Tahun Pengalaman</p>
+                <p className="text-xs text-gray-500">Servis & Nisan di Kediri</p>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </section>

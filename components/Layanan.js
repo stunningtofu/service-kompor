@@ -1,28 +1,116 @@
+import { FaFire, FaLightbulb, FaUtensils, FaFan, FaMicrochip, FaFillDrip, FaCheckCircle, FaStar } from 'react-icons/fa'
+import { FaMicrochip as FaChip } from 'react-icons/fa6'
+
 export default function Layanan() {
+  const services = [
+    {
+      icon: FaFire,
+      title: "Service Kompor",
+      description: "Kompor gas & listrik semua merek. Perbaikan burner, regulator, solenoid, dll.",
+      price: "Rp 50.000 - 150.000",
+      features: ["Semua merek", "Garansi 3 bulan", "Service di rumah"]
+    },
+    {
+      icon: FaLightbulb,
+      title: "Service Lampu LED",
+      description: "Perbaikan lampu LED mati, redup, berkedip. Ganti driver, LED strip, dll.",
+      price: "Rp 30.000 - 100.000",
+      features: ["LED rumah", "LED toko", "Garansi 6 bulan"]
+    },
+    {
+      icon: FaUtensils,
+      title: "Service Rice Cooker",
+      description: "Perbaikan rice cooker mati, tidak panas, tidak matang, dll.",
+      price: "Rp 40.000 - 120.000",
+      features: ["Semua kapasitas", "Garansi 3 bulan", "Service di rumah"]
+    },
+    {
+      icon: FaFan,
+      title: "Service Kipas Angin",
+      description: "Perbaikan kipas angin mati, berisik, tidak berputar, dll.",
+      price: "Rp 35.000 - 90.000",
+      features: ["Kipas dinding", "Kipas meja", "Garansi 3 bulan"]
+    },
+    {
+      icon: FaChip,
+      title: "Service Elektronik",
+      description: "Perbaikan TV, radio, charger, power supply, dan elektronik lainnya.",
+      price: "Rp 25.000 - 200.000",
+      features: ["Diagnosa gratis", "Sparepart tersedia", "Garansi servis"]
+    },
+    {
+      icon: FaFillDrip,
+      title: "Pembuatan Nisan",
+      description: "Custom nisan granit & marmer. Ukuran & desain sesuai permintaan.",
+      price: "Rp 500.000 - 5.000.000",
+      features: ["Granit premium", "Marmer import", "Garansi 1 tahun"]
+    }
+  ]
+
   return (
-    <section id="layanan" className="py-16 bg-white">
-      <div className="container mx-auto px-5 grid md:grid-cols-4 gap-6">
-        
-        <div className="p-5 bg-gray-50 rounded-xl">
-          <h4 className="font-bold">Service Kompor</h4>
-          <p>Kompor gas & listrik, semua merek.</p>
+    <section id="layanan" className="py-16 bg-gray-50">
+      <div className="container mx-auto px-5">
+        <div className="text-center mb-12">
+          <h3 className="text-3xl md:text-4xl font-bold text-gray-800 mb-4">
+            Layanan Kami
+          </h3>
+          <p className="text-gray-600 text-lg max-w-2xl mx-auto">
+            Kami menyediakan berbagai layanan service elektronik dan pembuatan nisan dengan harga terjangkau dan garansi servis
+          </p>
         </div>
 
-        <div className="p-5 bg-gray-50 rounded-xl">
-          <h4 className="font-bold">Service Lampu LED</h4>
-          <p>Perbaikan lampu LED mati & redup.</p>
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+          {services.map((service, index) => (
+            <div key={index} className="card-gradient p-6 rounded-2xl shadow-lg hover:shadow-xl transition duration-300 transform hover:-translate-y-1">
+              <div className="flex items-center gap-4 mb-4">
+                <div className="w-12 h-12 bg-primary/10 rounded-xl flex items-center justify-center">
+                  <service.icon className="text-primary text-2xl" />
+                </div>
+                <div>
+                  <h4 className="font-bold text-lg text-gray-800">{service.title}</h4>
+                  <div className="flex items-center gap-1">
+                    <FaStar className="text-yellow-400 text-sm" />
+                    <FaStar className="text-yellow-400 text-sm" />
+                    <FaStar className="text-yellow-400 text-sm" />
+                    <FaStar className="text-yellow-400 text-sm" />
+                    <FaStar className="text-yellow-400 text-sm" />
+                    <span className="text-xs text-gray-500 ml-1">(4.9)</span>
+                  </div>
+                </div>
+              </div>
+
+              <p className="text-gray-600 mb-4 text-sm leading-relaxed">{service.description}</p>
+
+              <div className="mb-4">
+                <p className="text-primary font-bold text-lg">{service.price}</p>
+              </div>
+
+              <ul className="space-y-2 mb-6">
+                {service.features.map((feature, idx) => (
+                  <li key={idx} className="flex items-center gap-2 text-sm text-gray-600">
+                    <FaCheckCircle className="text-primary text-xs flex-shrink-0" />
+                    {feature}
+                  </li>
+                ))}
+              </ul>
+
+              <a href="https://wa.me/6281234567890?text=Halo%20Pangestu%20Service%2C%20saya%20mau%20pesan%20layanan%20${service.title}" target="_blank"
+                className="w-full bg-primary hover:bg-primaryDark text-white font-semibold py-3 px-4 rounded-xl transition duration-300 flex items-center justify-center gap-2">
+                <service.icon className="text-lg" />
+                Pesan Sekarang
+              </a>
+            </div>
+          ))}
         </div>
 
-        <div className="p-5 bg-gray-50 rounded-xl">
-          <h4 className="font-bold">Kipas & Rice Cooker</h4>
-          <p>Perbaikan alat rumah tangga.</p>
+        <div className="text-center mt-12">
+          <p className="text-gray-600 mb-4">Butuh layanan lain? Hubungi kami untuk konsultasi gratis</p>
+          <a href="https://wa.me/6281234567890?text=Halo%20Pangestu%20Service%2C%20saya%20mau%20konsultasi%20layanan" target="_blank"
+            className="inline-flex items-center gap-2 bg-white border-2 border-primary text-primary hover:bg-primary hover:text-white font-semibold py-3 px-6 rounded-xl transition duration-300">
+            <FaCheckCircle className="text-lg" />
+            Konsultasi Gratis
+          </a>
         </div>
-
-        <div className="p-5 bg-gray-50 rounded-xl">
-          <h4 className="font-bold">Pembuatan Nisan</h4>
-          <p>Custom granit & marmer.</p>
-        </div>
-
       </div>
     </section>
   )

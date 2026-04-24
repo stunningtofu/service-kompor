@@ -1,22 +1,28 @@
-FROM node:20-alpine
-
+FROM node:20-alpine AS builder
 WORKDIR /app
 
-# Copy package files
-COPY package.json package-lock.json* ./
+# Copy hanya file dependency dulu (package-lock.json tidak tersedia)
+COPY package.json ./
 
 # Install dependencies
-RUN npm ci || npm install
+RUN npm install
 
-# Copy the rest of the application
+# Copy source code
 COPY . .
 
-# Build the Next.js application
+# Build Next.js
 RUN npm run build
 
-EXPOSE 3000
-
+# Production runner
+FROM node:20-alpine AS runner
+WORKDIR /app
 ENV NODE_ENV=production
 
-# Remove the port from start command since it's already in package.json
-CMD ["npm", "start"]
+# Copy hanya file yang diperlukan
+COPY --from=builder /app/public ./public
+COPY --from=builder /app/.next/standalone ./
+COPY --from=builder /app/.next/static ./.next/static
+COPY --from=builder /app/package.json ./
+
+EXPOSE 3000
+CMD ["node", "server.js"]
