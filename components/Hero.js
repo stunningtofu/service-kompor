@@ -1,5 +1,4 @@
-import { FaFire, FaLightbulb, FaUtensils, FaFan, FaMapMarkerAlt, FaCheckCircle, FaTools } from 'react-icons/fa'
-import { FaMicrochip, FaFillDrip } from 'react-icons/fa6'
+import { FaFire, FaLightbulb, FaUtensils, FaFan, FaMapMarkerAlt, FaCheckCircle, FaTools, FaMicrochip, FaFillDrip } from 'react-icons/fa'
 
 export default function Hero() {
   return (
@@ -27,7 +26,7 @@ export default function Hero() {
             </h2>
             <p className="text-gray-600 text-lg leading-relaxed">Panggilan ke rumah Anda di Kediri (Kota & Kabupaten) atau antar langsung ke tempat kami. Cepat, harga bersahabat, garansi servis, dan sudah berpengalaman 8+ tahun.</p>
             <div className="flex flex-wrap gap-4 pt-3">
-              <a href="https://wa.me/6281234567890?text=Halo%20Pangestu%20Service%2C%20saya%20mau%20pesan%20layanan%20di%20Kediri" target="_blank" className="bg-primary hover:bg-primaryDark text-white font-bold py-3.5 px-7 rounded-xl shadow-lg transition duration-300 flex items-center gap-2 transform hover:scale-105">
+              <a href="https://wa.me/6285859675459?text=Halo%20pak%2C%20saya%20ingin%20service" target="_blank" className="bg-primary hover:bg-primaryDark text-white font-bold py-3.5 px-7 rounded-xl shadow-lg transition duration-300 flex items-center gap-2 transform hover:scale-105">
                 <FaUtensils className="text-xl" />
                 Hubungi WhatsApp
               </a>

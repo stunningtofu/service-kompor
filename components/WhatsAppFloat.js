@@ -1,8 +1,8 @@
 import { FaWhatsapp } from 'react-icons/fa'
 
 export default function WhatsAppFloat() {
-  const phoneNumber = "6281234567890" // Ganti dengan nomor asli
-  const message = encodeURIComponent("Halo Pangestu Service, saya mau konsultasi layanan servis di Kediri")
+  const phoneNumber = "6285859675459" // Ganti dengan nomor asli
+  const message = encodeURIComponent("Halo pak, saya ingin service")
 
   return (
     <a

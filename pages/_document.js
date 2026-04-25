@@ -5,6 +5,7 @@ export default function Document() {
     <Html lang="id">
       <Head>
         <meta name="description" content="Pangestu Service - Jasa service kompor, lampu LED, alat elektronik (kipas, rice cooker) dan pembuatan nisan di Kediri, Jawa Timur. Bisa panggilan ke rumah atau antar ke tempat kami. Profesional & terpercaya." />
+        <meta name="google-site-verification" content="uHDCdB9R6RQ2uyreu2J2S9AXe0eWCm-bkhhP3P7JMcw" />
 
         {/* Font Awesome 6 */}
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
@@ -17,7 +18,7 @@ export default function Document() {
               "@type": "LocalBusiness",
               name: "Pangestu Service",
               areaServed: "Kediri",
-              telephone: "+6281234567890"
+              telephone: "+6285859675459"
             })
           }}
         />

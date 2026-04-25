@@ -66,8 +66,8 @@ export default function Kontak() {
                 Lokasi Bengkel
               </h4>
               <p className="text-gray-600 mb-3">
-                Jl. Ronggo Warsito No. 123<br />
-                Gurah, Kediri, Jawa Timur 64151
+                Jalan Ronggo Warsito No.65, RT.002/RW.004, Dusun Pojok, Desa Sukorejo,
+                Kabupaten Kediri, Jawa Timur 64181, Indonesia
               </p>
               <div className="flex items-center gap-2 text-sm text-gray-500">
                 <FaMapMarkerAlt className="text-primary" />
@@ -81,13 +81,13 @@ export default function Kontak() {
                 Kontak Kami
               </h4>
               <div className="space-y-3">
-                <a href="tel:+6281234567890" className="flex items-center gap-3 text-gray-600 hover:text-primary transition">
+                <a href="tel:+6285859675459" className="flex items-center gap-3 text-gray-600 hover:text-primary transition">
                   <FaPhone className="text-primary" />
-                  <span>+62 812-3456-7890</span>
+                  <span>+62 858-5967-5459</span>
                 </a>
-                <a href="https://wa.me/6281234567890" target="_blank" className="flex items-center gap-3 text-gray-600 hover:text-primary transition">
+                <a href="https://wa.me/6285859675459?text=Halo%20pak%2C%20saya%20ingin%20service" target="_blank" className="flex items-center gap-3 text-gray-600 hover:text-primary transition">
                   <FaWhatsapp className="text-green-500" />
-                  <span>+62 812-3456-7890 (WhatsApp)</span>
+                  <span>+62 858-5967-5459 (WhatsApp)</span>
                 </a>
               </div>
             </div>
@@ -107,7 +107,7 @@ export default function Kontak() {
             <h4 className="font-bold text-xl text-gray-800 mb-4">Lokasi di Peta</h4>
             <div className="map-container rounded-xl overflow-hidden">
               <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3953.098!2d112.013!3d-7.816!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zN8KwNDknMDAuMCJTIDExMsKwMDAnNDcuMiJF!5e0!3m2!1sen!2sid!4v1234567890!5m2!1sen!2sid"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3952.80670590268!2d112.0492446757834!3d-7.81027607754791!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e785921df7d6edb%3A0x830861cd652bd3c2!2sPANGESTU%20Service%20Kompor%20Gas!5e0!3m2!1sen!2ssg!4v1777097468697!5m2!1sen!2ssg"
                 width="100%"
                 height="300"
                 style={{ border: 0 }}
@@ -132,7 +132,7 @@ export default function Kontak() {
                   ))}
                 </div>
                 <FaQuoteLeft className="text-primary/30 text-2xl mb-3" />
-                <p className="text-gray-600 mb-4 italic">"{testimonial.text}"</p>
+                <p className="text-gray-600 mb-4 italic">&quot;{testimonial.text}&quot;</p>
                 <div className="border-t pt-3">
                   <p className="font-semibold text-gray-800">{testimonial.name}</p>
                   <p className="text-sm text-gray-500">{testimonial.location}</p>

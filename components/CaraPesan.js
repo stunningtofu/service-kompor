@@ -8,7 +8,6 @@ export default function CaraPesan() {
       title: "Panggilan ke Rumah",
       description: "Tim teknisi kami datang langsung ke rumah Anda di wilayah Kediri Raya. Cocok untuk service kompor, kipas, rice cooker, dan elektronik ringan.",
       features: ["Gratis ongkos panggil", "Service di tempat", "Estimasi waktu 1-2 jam"],
-      price: "Rp 50.000 - 150.000",
       popular: false
     },
     {
@@ -17,16 +16,14 @@ export default function CaraPesan() {
       title: "Antar Barang ke Bengkel",
       description: "Anda antar barang ke bengkel kami. Cocok untuk service LED, elektronik berat, dan pembuatan nisan yang membutuhkan waktu lebih lama.",
       features: ["Diagnosa gratis", "Antar-jemput tersedia", "Garansi servis"],
-      price: "Rp 25.000 - 200.000",
       popular: true
     },
     {
       icon: FaComments,
       step: "3",
       title: "Konsultasi WhatsApp",
-      description: "Kirim foto kerusakan via WhatsApp untuk konsultasi awal. Kami berikan estimasi harga dan saran perbaikan sebelum Anda memutuskan.",
-      features: ["Konsultasi gratis", "Estimasi harga", "Jawab cepat"],
-      price: "Gratis",
+      description: "Kirim foto kerusakan via WhatsApp untuk konsultasi awal. Kami berikan saran perbaikan dan estimasi servis sebelum Anda memutuskan.",
+      features: ["Konsultasi gratis", "Estimasi servis", "Jawab cepat"],
       popular: false
     }
   ]
@@ -39,7 +36,7 @@ export default function CaraPesan() {
             Cara Pemesanan
           </h3>
           <p className="text-gray-600 text-lg max-w-2xl mx-auto">
-            Pilih cara yang paling sesuai dengan kebutuhan Anda. Semua layanan kami memberikan garansi servis dan harga transparan
+            Pilih cara yang paling sesuai dengan kebutuhan Anda. Semua layanan kami memberikan garansi servis dan konsultasi mudah.
           </p>
         </div>
 
@@ -63,7 +60,6 @@ export default function CaraPesan() {
                 </div>
                 <h4 className="font-bold text-xl text-gray-800 mb-2">{option.title}</h4>
                 <p className="text-gray-600 text-sm leading-relaxed mb-4">{option.description}</p>
-                <div className="text-primary font-bold text-2xl mb-4">{option.price}</div>
               </div>
 
               <ul className="space-y-3 mb-6">
@@ -75,7 +71,7 @@ export default function CaraPesan() {
                 ))}
               </ul>
 
-              <a href="https://wa.me/6281234567890?text=Halo%20Pangestu%20Service%2C%20saya%20mau%20pesan%20layanan%20${option.title}" target="_blank"
+              <a href="https://wa.me/6285859675459?text=Halo%20pak%2C%20saya%20ingin%20service" target="_blank"
                 className={`w-full font-semibold py-3 px-4 rounded-xl transition duration-300 flex items-center justify-center gap-2 ${option.popular ? 'bg-primary hover:bg-primaryDark text-white' : 'bg-gray-100 hover:bg-gray-200 text-gray-800'}`}>
                 <option.icon className="text-lg" />
                 Pilih Cara Ini
@@ -84,32 +80,6 @@ export default function CaraPesan() {
           ))}
         </div>
 
-        <div className="mt-12 bg-white rounded-2xl p-6 shadow-lg">
-          <div className="grid md:grid-cols-2 gap-6 items-center">
-            <div>
-              <h4 className="font-bold text-xl text-gray-800 mb-3 flex items-center gap-2">
-                <FaClock className="text-primary" />
-                Jam Operasional
-              </h4>
-              <div className="space-y-2 text-gray-600">
-                <p><strong>Senin - Jumat:</strong> 08:00 - 17:00 WIB</p>
-                <p><strong>Sabtu:</strong> 08:00 - 15:00 WIB</p>
-                <p><strong>Minggu:</strong> Tutup (Emergency call only)</p>
-              </div>
-            </div>
-            <div>
-              <h4 className="font-bold text-xl text-gray-800 mb-3 flex items-center gap-2">
-                <FaMapMarkerAlt className="text-primary" />
-                Lokasi Kami
-              </h4>
-              <p className="text-gray-600 mb-3">Jl. Pangestu No. 123, Kediri, Jawa Timur</p>
-              <a href="#kontak" className="text-primary hover:text-primaryDark font-semibold flex items-center gap-2">
-                <FaMapMarkerAlt />
-                Lihat di Peta →
-              </a>
-            </div>
-          </div>
-        </div>
       </div>
     </section>
   )

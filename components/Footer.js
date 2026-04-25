@@ -21,7 +21,7 @@ export default function Footer() {
               Sudah 8+ tahun melayani dengan kualitas terbaik dan harga bersahabat.
             </p>
             <div className="flex space-x-4">
-              <a href="https://wa.me/6281234567890" target="_blank" className="text-green-400 hover:text-green-300 transition">
+              <a href="https://wa.me/6285859675459?text=Halo%20pak%2C%20saya%20ingin%20service" target="_blank" className="text-green-400 hover:text-green-300 transition">
                 <FaWhatsapp className="text-xl" />
               </a>
             </div>
@@ -44,7 +44,7 @@ export default function Footer() {
             <ul className="space-y-3 text-gray-300">
               <li className="flex items-center gap-2">
                 <FaPhone className="text-primary text-sm" />
-                <a href="tel:+6281234567890" className="hover:text-primary transition">+62 812-3456-7890</a>
+                <a href="tel:+6285859675459" className="hover:text-primary transition">+62 858-5967-5459</a>
               </li>
               <li className="flex items-start gap-2">
                 <FaMapMarkerAlt className="text-primary text-sm mt-1" />
