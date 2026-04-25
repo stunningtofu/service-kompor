@@ -47,18 +47,25 @@ export default function Document() {
             __html: JSON.stringify({
               "@context": "https://schema.org",
               "@type": "LocalBusiness",
-              name: "Pangestu Service",
-              description: "Jasa service kompor, lampu LED, alat elektronik dan pembuatan nisan",
-              url: siteUrl,
-              telephone: "+6285859675459",
-              areaServed: "Kediri",
-              address: {
+              "name": "Pangestu Service",
+              "description": "Layanan servis panggilan ke rumah di Kota & Kabupaten Kediri. Cepat, bergaransi, harga transparan, dan berpengalaman 3+ tahun.",
+              "telephone": "+6285859675459",
+              "url": siteUrl,
+              "address": {
                 "@type": "PostalAddress",
-                streetAddress: "Jalan Ronggo Warsito No.65, RT.002/RW.004, Dusun Pojok",
-                addressLocality: "Kediri",
-                addressRegion: "Jawa Timur",
-                postalCode: "64181",
-                addressCountry: "ID"
+                "streetAddress": "Jalan Ronggo Warsito No.65, RT.002/RW.004, Dusun Pojok, Desa Sukorejo",
+                "addressLocality": "Kediri",
+                "addressRegion": "Jawa Timur",
+                "postalCode": "64181",
+                "addressCountry": "ID"
+              },
+              "areaServed": ["Kota Kediri", "Kabupaten Kediri"],
+              "priceRange": "$$",
+              "openingHoursSpecification": {
+                "@type": "OpeningHoursSpecification",
+                "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"],
+                "opens": "08:00",
+                "closes": "17:00"
               }
             })
           }}
