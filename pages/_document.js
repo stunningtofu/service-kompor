@@ -33,12 +33,8 @@ export default function Document() {
         {/* Google Site Verification */}
         <meta name="google-site-verification" content="uHDCdB9R6RQ2uyreu2J2S9AXe0eWCm-bkhhP3P7JMcw" />
         
-        {/* Font Awesome 6 */}
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
-        
         {/* Favicon */}
-        <link rel="icon" href="/favicon.ico" />
-        <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+        <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
 
         {/* Schema.org Structured Data */}
         <script
