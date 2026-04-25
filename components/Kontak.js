@@ -105,17 +105,21 @@ export default function Kontak() {
           {/* Map */}
           <div className="bg-white p-6 rounded-2xl shadow-lg">
             <h4 className="font-bold text-xl text-gray-800 mb-4">Lokasi di Peta</h4>
-            <div className="map-container rounded-xl overflow-hidden">
-              <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3952.80670590268!2d112.0492446757834!3d-7.81027607754791!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e785921df7d6edb%3A0x830861cd652bd3c2!2sPANGESTU%20Service%20Kompor%20Gas!5e0!3m2!1sen!2ssg!4v1777097468697!5m2!1sen!2ssg"
-                width="100%"
-                height="300"
-                style={{ border: 0 }}
-                allowFullScreen=""
-                loading="lazy"
-                referrerPolicy="no-referrer-when-downgrade"
-                className="rounded-xl"
-              />
+            <div className="rounded-xl overflow-hidden border border-gray-200 bg-slate-50 p-6">
+              <p className="text-sm text-gray-600 mb-4">
+                Untuk menghindari peringatan keamanan browser dan masalah loading pada Google Maps embed, buka lokasi kami langsung di Google Maps.
+              </p>
+              <address className="not-italic text-gray-700 mb-6">
+                Jalan Ronggo Warsito No.65, RT.002/RW.004, Dusun Pojok, Desa Sukorejo, Kabupaten Kediri, Jawa Timur 64181
+              </address>
+              <a
+                href="https://www.google.com/maps/place/PANGESTU+Service+Kompor+Gas/@-7.8102761,112.0492447,17z"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center justify-center rounded-full bg-primary px-4 py-3 text-white font-semibold transition hover:bg-primary/90"
+              >
+                Buka di Google Maps
+              </a>
             </div>
           </div>
         </div>
