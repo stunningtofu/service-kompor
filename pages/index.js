@@ -20,12 +20,15 @@ export default function Home() {
       </Head>
 
       <Header />
-      <WhatsAppFloat />
 
-      <Hero />
-      <Layanan />
-      <CaraPesan />
-      <Kontak />
+      <main className="pb-24">
+        <WhatsAppFloat />
+        <Hero />
+        <Layanan />
+        <CaraPesan />
+        <Kontak />
+      </main>
+
       <Footer />
     </>
   )

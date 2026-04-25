@@ -8,7 +8,7 @@ export default function Document() {
       <Head>
         {/* Primary Meta Tags */}
         <meta charSet="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5" />
         <meta name="description" content="Pangestu Service - Jasa service kompor, lampu LED, alat elektronik (kipas, rice cooker) dan pembuatan nisan di Kediri, Jawa Timur. Bisa panggilan ke rumah atau antar ke tempat kami. Profesional & terpercaya." />
         <meta name="keywords" content="service kompor, service LED, service elektronik, pembuatan nisan, Kediri" />
         <meta name="author" content="Pangestu Service" />

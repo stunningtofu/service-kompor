@@ -14,7 +14,7 @@ export default function Hero() {
               <FaMapMarkerAlt className="text-white text-xs" />
               <span>Melayani Wilayah Kediri Raya</span>
             </div>
-            <h2 className="text-4xl md:text-5xl lg:text-6xl font-extrabold text-gray-800 leading-tight">
+            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-gray-800 leading-tight">
               Service Kompor, LED,
               <span className="text-primary relative inline-block">
                 Elektronik
@@ -24,13 +24,23 @@ export default function Hero() {
               </span>
               & Pembuatan Nisan
             </h2>
-            <p className="text-gray-600 text-lg leading-relaxed">Panggilan ke rumah Anda di Kediri (Kota & Kabupaten) atau antar langsung ke tempat kami. Cepat, harga bersahabat, garansi servis, dan sudah berpengalaman 3+ tahun.</p>
-            <div className="flex flex-wrap gap-4 pt-3">
-              <a href="https://wa.me/6285859675459?text=Halo%20pak%2C%20saya%20ingin%20service" target="_blank" className="bg-primary hover:bg-primaryDark text-white font-bold py-3.5 px-7 rounded-xl shadow-lg transition duration-300 flex items-center gap-2 transform hover:scale-105">
+            <p className="text-gray-600 text-base sm:text-lg leading-relaxed">Panggilan ke rumah Anda di Kediri (Kota & Kabupaten) atau antar langsung ke tempat kami. Cepat, harga bersahabat, garansi servis, dan sudah berpengalaman 3+ tahun.</p>
+            <div className="flex flex-col sm:flex-row flex-wrap gap-3 pt-3">
+              <a
+                href="https://wa.me/6285859675459?text=Halo%20pak%2C%20saya%20ingin%20service"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex min-h-[44px] items-center justify-center rounded-xl bg-primary px-6 py-3 text-center text-white font-bold shadow-lg transition-all duration-300 hover:bg-primaryDark focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2"
+              >
                 <FaUtensils className="text-xl" />
                 Hubungi WhatsApp
               </a>
-              <a href="#carapesan" className="border-2 border-primary text-primary hover:bg-primary/10 font-semibold py-3.5 px-7 rounded-xl transition duration-300">Cara Pemesanan →</a>
+              <a
+                href="#carapesan"
+                className="inline-flex min-h-[44px] items-center justify-center rounded-xl border-2 border-primary px-6 py-3 text-center text-primary font-semibold transition-all duration-300 hover:bg-primary/10"
+              >
+                Cara Pemesanan →
+              </a>
             </div>
             <div className="flex flex-wrap items-center gap-5 pt-4">
               <div className="flex items-center gap-2 bg-white/70 backdrop-blur-sm px-4 py-2 rounded-full shadow-sm">
@@ -49,8 +59,8 @@ export default function Hero() {
           </div>
 
           {/* Side icon animasi (tanpa gambar) */}
-          <div className="relative flex justify-center">
-            <div className="hero-icon-bg rounded-3xl p-8 w-80 md:w-96">
+          <div className="relative hidden md:flex justify-center">
+            <div className="hero-icon-bg rounded-3xl p-8 w-full max-w-96">
               <div className="grid grid-cols-3 gap-6 text-center">
                 <div className="animate-float-icons">
                   <div className="w-16 h-16 bg-primary/10 rounded-2xl flex items-center justify-center mx-auto mb-2">
