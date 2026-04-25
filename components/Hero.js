@@ -24,7 +24,7 @@ export default function Hero() {
               </span>
               & Pembuatan Nisan
             </h2>
-            <p className="text-gray-600 text-lg leading-relaxed">Panggilan ke rumah Anda di Kediri (Kota & Kabupaten) atau antar langsung ke tempat kami. Cepat, harga bersahabat, garansi servis, dan sudah berpengalaman 8+ tahun.</p>
+            <p className="text-gray-600 text-lg leading-relaxed">Panggilan ke rumah Anda di Kediri (Kota & Kabupaten) atau antar langsung ke tempat kami. Cepat, harga bersahabat, garansi servis, dan sudah berpengalaman 3+ tahun.</p>
             <div className="flex flex-wrap gap-4 pt-3">
               <a href="https://wa.me/6285859675459?text=Halo%20pak%2C%20saya%20ingin%20service" target="_blank" className="bg-primary hover:bg-primaryDark text-white font-bold py-3.5 px-7 rounded-xl shadow-lg transition duration-300 flex items-center gap-2 transform hover:scale-105">
                 <FaUtensils className="text-xl" />
@@ -90,7 +90,7 @@ export default function Hero() {
                 </div>
               </div>
               <div className="mt-6 text-center">
-                <p className="text-primary font-bold text-lg">8+ Tahun Pengalaman</p>
+                <p className="text-primary font-bold text-lg">3+ tahun Pengalaman</p>
                 <p className="text-xs text-gray-500">Servis & Nisan di Kediri</p>
               </div>
             </div>

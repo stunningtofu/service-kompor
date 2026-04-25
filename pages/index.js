@@ -12,7 +12,7 @@ export default function Home() {
     <>
       <Head>
         <title>Pangestu Service | Servis Kompor Kediri</title>
-        <meta name="description" content="Layanan servis kompor, LED, dan elektronik di Kediri. Pengalaman 8+ tahun." />
+        <meta name="description" content="Layanan servis kompor, LED, dan elektronik di Kediri. Pengalaman 3+ tahun." />
         <meta name="keywords" content="servis kompor, kediri, elektronik, reparasi" />
         <meta property="og:title" content="Pangestu Service Kediri" />
         <meta property="og:description" content="Servis kompor & elektronik profesional" />
