@@ -1,0 +1,14 @@
+# Allow Google to crawl your site
+User-agent: *
+Allow: /
+
+# Disallow private or sensitive areas
+Disallow: /api/
+Disallow: /.next/
+Disallow: /node_modules/
+
+# Crawl delay
+Crawl-delay: 1
+
+# Sitemap location
+Sitemap: https://pangestuservice.vercel.app/sitemap.xml
