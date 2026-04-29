@@ -1,4 +1,4 @@
-import { FaFire, FaLightbulb, FaUtensils, FaFan, FaMicrochip as FaChip, FaFillDrip, FaCheckCircle, FaStar } from 'react-icons/fa'
+import { FaFire, FaLightbulb, FaUtensils, FaFan, FaMicrochip as FaChip, FaFillDrip, FaCheckCircle, FaStar, FaWhatsapp } from 'react-icons/fa'
 
 export default function Layanan() {
   const services = [
@@ -83,9 +83,9 @@ export default function Layanan() {
                 ))}
               </ul>
 
-              <a href="https://wa.me/6285859675459?text=Halo%20pak%2C%20saya%20ingin%20service" target="_blank"
-                className="w-full bg-primary hover:bg-primaryDark text-white font-semibold py-3 px-4 rounded-xl transition duration-300 flex items-center justify-center gap-2">
-                <service.icon className="text-lg" />
+              <a href="https://wa.me/6285859675459?text=Halo%20pak%2C%20saya%20ingin%20service" target="_blank" rel="noopener noreferrer"
+                className="w-full bg-primary hover:bg-primaryDark text-white font-semibold py-3 px-4 rounded-xl shadow-md hover:shadow-lg transition-all duration-300 transform hover:-translate-y-1 flex items-center justify-center gap-2">
+                <FaWhatsapp className="text-xl" />
                 Pesan Sekarang
               </a>
             </div>
@@ -94,9 +94,9 @@ export default function Layanan() {
 
         <div className="text-center mt-12">
           <p className="text-gray-600 mb-4">Butuh layanan lain? Hubungi kami untuk konsultasi gratis</p>
-          <a href="https://wa.me/6285859675459?text=Halo%20pak%2C%20saya%20ingin%20service" target="_blank"
-            className="inline-flex items-center gap-2 bg-white border-2 border-primary text-primary hover:bg-primary hover:text-white font-semibold py-3 px-6 rounded-xl transition duration-300">
-            <FaCheckCircle className="text-lg" />
+          <a href="https://wa.me/6285859675459?text=Halo%20pak%2C%20saya%20ingin%20service" target="_blank" rel="noopener noreferrer"
+            className="inline-flex items-center gap-2 bg-white border-2 border-primary text-primary hover:bg-primary hover:text-white font-semibold py-3 px-8 rounded-full shadow-md hover:shadow-lg transition-all duration-300 transform hover:-translate-y-1">
+            <FaWhatsapp className="text-xl" />
             Konsultasi Gratis
           </a>
         </div>

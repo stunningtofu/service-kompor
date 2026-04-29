@@ -18,7 +18,7 @@ export default function Kontak() {
     },
     {
       name: "Ibu Rina",
-      location: "Nganjuk",
+      location: "Kota Pare",
       text: "Lampu LED rumah redup semua, sudah diperbaiki dengan baik. Sekarang terang kembali. Terima kasih Pak!",
       rating: 5,
       service: "Service Lampu LED"
@@ -103,24 +103,33 @@ export default function Kontak() {
           </div>
 
           {/* Map */}
-          <div className="bg-white p-6 rounded-2xl shadow-lg">
-            <h4 className="font-bold text-xl text-gray-800 mb-4">Lokasi di Peta</h4>
-            <div className="rounded-xl overflow-hidden border border-gray-200 bg-slate-50 p-6">
-              <p className="text-sm text-gray-600 mb-4">
-                Untuk menghindari peringatan keamanan browser dan masalah loading pada Google Maps embed, buka lokasi kami langsung di Google Maps.
-              </p>
-              <address className="not-italic text-gray-700 mb-6">
-                Jalan Ronggo Warsito No.65, RT.002/RW.004, Dusun Pojok, Desa Sukorejo, Kabupaten Kediri, Jawa Timur 64181
-              </address>
-              <a
-                href="https://www.google.com/maps/place/PANGESTU+Service+Kompor+Gas/@-7.8102761,112.0492447,17z"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center justify-center rounded-full bg-primary px-4 py-3 text-white font-semibold transition hover:bg-primary/90"
-              >
-                Buka di Google Maps
-              </a>
+          <div className="bg-white p-6 rounded-2xl shadow-lg flex flex-col h-full">
+            <h4 className="font-bold text-xl text-gray-800 mb-4 flex items-center gap-2">
+              <FaMapMarkerAlt className="text-primary" />
+              Lokasi di Peta
+            </h4>
+            <div className="rounded-xl overflow-hidden border border-gray-200 relative flex-grow min-h-[300px] mb-4 group">
+              {/* Embedded Google Maps */}
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3952.840959715024!2d112.10307067578337!3d-7.806655477505406!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e785921df7d6edb%3A0x830861cd652bd3c2!2sPANGESTU%20Service%20Kompor%20Gas!5e0!3m2!1sen!2sid!4v1777394329871!5m2!1sen!2sid"
+                width="100%"
+                height="100%"
+                style={{ border: 0, minHeight: '300px' }}
+                allowFullScreen={true}
+                loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
+                className="absolute inset-0 w-full h-full"
+              ></iframe>
             </div>
+            <a
+              href="https://www.google.com/maps/place/PANGESTU+Service+Kompor+Gas/@-7.8066555,112.1030707,17z"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="w-full flex items-center justify-center gap-2 rounded-xl bg-primary px-4 py-3 text-white font-semibold transition duration-300 hover:bg-primary/90 hover:shadow-lg"
+            >
+              <FaMapMarkerAlt />
+              Buka di Aplikasi Google Maps
+            </a>
           </div>
         </div>
 
