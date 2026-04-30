@@ -1,48 +1,9 @@
 import { FaMapMarkerAlt, FaPhone, FaWhatsapp, FaStar, FaQuoteLeft, FaQuestionCircle } from 'react-icons/fa'
+import siteData from '@/data/siteData.json'
 
 export default function Kontak() {
-  const testimonials = [
-    {
-      name: "Bu Siti",
-      location: "Kediri Kota",
-      text: "Service kompornya cepat dan rapi. Sudah 3 tahun pakai jasa beliau, selalu puas. Harganya juga bersahabat.",
-      rating: 5,
-      service: "Service Kompor Gas"
-    },
-    {
-      name: "Pak Budi",
-      location: "Pare",
-      text: "Membuat nisan untuk orang tua. Hasilnya bagus sekali, granitnya berkualitas. Prosesnya juga tidak terlalu lama.",
-      rating: 5,
-      service: "Pembuatan Nisan"
-    },
-    {
-      name: "Ibu Rina",
-      location: "Kota Pare",
-      text: "Lampu LED rumah redup semua, sudah diperbaiki dengan baik. Sekarang terang kembali. Terima kasih Pak!",
-      rating: 5,
-      service: "Service Lampu LED"
-    }
-  ]
-
-  const faqs = [
-    {
-      question: "Berapa lama waktu service?",
-      answer: "Untuk service ringan (kompor, kipas) biasanya 1-2 jam. Service LED dan elektronik bisa 2-4 jam tergantung kerusakan."
-    },
-    {
-      question: "Apakah ada garansi servis?",
-      answer: "Ya, semua service kami memberikan garansi minimal 3 bulan. Untuk pembuatan nisan garansi 1 tahun."
-    },
-    {
-      question: "Apakah sparepart tersedia?",
-      answer: "Ya, kami menyediakan berbagai sparepart untuk kompor, LED, dan elektronik. Jika tidak ada, kami bisa pesan dengan waktu 1-2 hari."
-    },
-    {
-      question: "Berapa biaya panggilan ke rumah?",
-      answer: "Biaya panggilan ke rumah GRATIS untuk wilayah Kediri Kota. Untuk daerah sekitar ada biaya transport minimal Rp 25.000."
-    }
-  ]
+  const { kontak, contact } = siteData;
+  const waUrl = `https://wa.me/${contact.whatsappNumber}?text=${encodeURIComponent(contact.whatsappMessage)}`;
 
   return (
     <section id="kontak" className="py-16 bg-gray-50">
@@ -50,10 +11,10 @@ export default function Kontak() {
         {/* Header */}
         <div className="text-center mb-12">
           <h3 className="text-3xl md:text-4xl font-bold text-gray-800 mb-4">
-            Kontak & Lokasi
+            {kontak.title}
           </h3>
           <p className="text-gray-600 text-lg max-w-2xl mx-auto">
-            Kunjungi bengkel kami atau hubungi untuk konsultasi gratis. Kami siap melayani Anda dengan profesional
+            {kontak.description}
           </p>
         </div>
 
@@ -66,8 +27,7 @@ export default function Kontak() {
                 Lokasi Bengkel
               </h4>
               <p className="text-gray-600 mb-3">
-                Jalan Ronggo Warsito No.65, RT.002/RW.004, Dusun Pojok, Desa Sukorejo,
-                Kabupaten Kediri, Jawa Timur 64181, Indonesia
+                {contact.address}
               </p>
               <div className="flex items-center gap-2 text-sm text-gray-500">
                 <FaMapMarkerAlt className="text-primary" />
@@ -81,13 +41,13 @@ export default function Kontak() {
                 Kontak Kami
               </h4>
               <div className="space-y-3">
-                <a href="tel:+6285859675459" className="flex items-center gap-3 text-gray-600 hover:text-primary transition">
+                <a href={`tel:+${contact.whatsappNumber}`} className="flex items-center gap-3 text-gray-600 hover:text-primary transition">
                   <FaPhone className="text-primary" />
-                  <span>+62 858-5967-5459</span>
+                  <span>{contact.phoneDisplay}</span>
                 </a>
-                <a href="https://wa.me/6285859675459?text=Halo%20pak%2C%20saya%20ingin%20service" target="_blank" className="flex items-center gap-3 text-gray-600 hover:text-primary transition">
+                <a href={waUrl} target="_blank" rel="noopener noreferrer" className="flex items-center gap-3 text-gray-600 hover:text-primary transition">
                   <FaWhatsapp className="text-green-500" />
-                  <span>+62 858-5967-5459 (WhatsApp)</span>
+                  <span>{contact.phoneDisplay} (WhatsApp)</span>
                 </a>
               </div>
             </div>
@@ -95,9 +55,9 @@ export default function Kontak() {
             <div className="bg-primary/5 p-6 rounded-2xl border border-primary/20">
               <h4 className="font-bold text-lg text-gray-800 mb-3">Jam Operasional</h4>
               <div className="space-y-2 text-gray-600">
-                <p><strong>Senin - Jumat:</strong> 08:00 - 17:00 WIB</p>
-                <p><strong>Sabtu:</strong> 08:00 - 15:00 WIB</p>
-                <p><strong>Minggu:</strong> Tutup (Emergency call only)</p>
+                <p><strong>Senin - Jumat:</strong> {contact.hours.weekday}</p>
+                <p><strong>Sabtu:</strong> {contact.hours.saturday}</p>
+                <p><strong>Minggu:</strong> {contact.hours.sunday}</p>
               </div>
             </div>
           </div>
@@ -111,7 +71,7 @@ export default function Kontak() {
             <div className="rounded-xl overflow-hidden border border-gray-200 relative flex-grow min-h-[300px] mb-4 group">
               {/* Embedded Google Maps */}
               <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3952.840959715024!2d112.10307067578337!3d-7.806655477505406!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e785921df7d6edb%3A0x830861cd652bd3c2!2sPANGESTU%20Service%20Kompor%20Gas!5e0!3m2!1sen!2sid!4v1777394329871!5m2!1sen!2sid"
+                src={contact.mapEmbedUrl}
                 width="100%"
                 height="100%"
                 style={{ border: 0, minHeight: '300px' }}
@@ -122,7 +82,7 @@ export default function Kontak() {
               ></iframe>
             </div>
             <a
-              href="https://www.google.com/maps/place/PANGESTU+Service+Kompor+Gas/@-7.8066555,112.1030707,17z"
+              href={contact.mapUrl}
               target="_blank"
               rel="noopener noreferrer"
               className="w-full flex items-center justify-center gap-2 rounded-xl bg-primary px-4 py-3 text-white font-semibold transition duration-300 hover:bg-primary/90 hover:shadow-lg"
@@ -137,7 +97,7 @@ export default function Kontak() {
         <div className="mb-16">
           <h4 className="text-2xl font-bold text-gray-800 text-center mb-8">Testimoni Pelanggan</h4>
           <div className="grid md:grid-cols-3 gap-6">
-            {testimonials.map((testimonial, index) => (
+            {kontak.testimonials.map((testimonial, index) => (
               <div key={index} className="bg-white p-6 rounded-2xl shadow-lg hover:shadow-xl transition duration-300">
                 <div className="flex items-center gap-1 mb-3">
                   {[...Array(testimonial.rating)].map((_, i) => (
@@ -163,7 +123,7 @@ export default function Kontak() {
             Pertanyaan Umum
           </h4>
           <div className="grid md:grid-cols-2 gap-6">
-            {faqs.map((faq, index) => (
+            {kontak.faqs.map((faq, index) => (
               <div key={index} className="bg-white p-6 rounded-2xl shadow-lg">
                 <h5 className="font-semibold text-gray-800 mb-3">{faq.question}</h5>
                 <p className="text-gray-600 text-sm leading-relaxed">{faq.answer}</p>

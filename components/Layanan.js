@@ -1,44 +1,10 @@
-import { FaFire, FaLightbulb, FaUtensils, FaFan, FaMicrochip as FaChip, FaFillDrip, FaCheckCircle, FaStar, FaWhatsapp } from 'react-icons/fa'
+import { FaCheckCircle, FaStar, FaWhatsapp } from 'react-icons/fa'
+import IconRenderer from './IconRenderer'
+import siteData from '@/data/siteData.json'
 
 export default function Layanan() {
-  const services = [
-    {
-      icon: FaFire,
-      title: "Service Kompor",
-      description: "Kompor gas & listrik semua merek. Perbaikan burner, regulator, solenoid, dll.",
-      features: ["Semua merek", "Garansi 3 bulan", "Service di rumah"]
-    },
-    {
-      icon: FaLightbulb,
-      title: "Service Lampu LED",
-      description: "Perbaikan lampu LED mati, redup, berkedip. Ganti driver, LED strip, dll.",
-      features: ["LED rumah", "LED toko", "Garansi 6 bulan"]
-    },
-    {
-      icon: FaUtensils,
-      title: "Service Rice Cooker",
-      description: "Perbaikan rice cooker mati, tidak panas, tidak matang, dll.",
-      features: ["Semua kapasitas", "Garansi 3 bulan", "Service di rumah"]
-    },
-    {
-      icon: FaFan,
-      title: "Service Kipas Angin",
-      description: "Perbaikan kipas angin mati, berisik, tidak berputar, dll.",
-      features: ["Kipas dinding", "Kipas meja", "Garansi 3 bulan"]
-    },
-    {
-      icon: FaChip,
-      title: "Service Elektronik",
-      description: "Perbaikan TV, radio, charger, power supply, dan elektronik lainnya.",
-      features: ["Diagnosa gratis", "Sparepart tersedia", "Garansi servis"]
-    },
-    {
-      icon: FaFillDrip,
-      title: "Pembuatan Nisan",
-      description: "Custom nisan granit & marmer. Ukuran & desain sesuai permintaan.",
-      features: ["Granit premium", "Marmer import", "Garansi 1 tahun"]
-    }
-  ]
+  const { services, contact } = siteData;
+  const waUrl = `https://wa.me/${contact.whatsappNumber}?text=${encodeURIComponent(contact.whatsappMessage)}`;
 
   return (
     <section id="layanan" className="py-16 bg-gray-50">
@@ -54,10 +20,10 @@ export default function Layanan() {
 
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
           {services.map((service, index) => (
-            <div key={index} className="card-gradient p-6 rounded-2xl shadow-lg hover:shadow-xl transition duration-300 transform hover:-translate-y-1">
+            <div key={index} className="card-gradient p-6 rounded-2xl shadow-lg hover:shadow-xl transition duration-300 transform hover:-translate-y-1 flex flex-col h-full">
               <div className="flex items-center gap-4 mb-4">
                 <div className="w-12 h-12 bg-primary/10 rounded-xl flex items-center justify-center">
-                  <service.icon className="text-primary text-2xl" />
+                  <IconRenderer iconName={service.icon} className="text-primary text-2xl" />
                 </div>
                 <div>
                   <h4 className="font-bold text-lg text-gray-800">{service.title}</h4>
@@ -74,7 +40,7 @@ export default function Layanan() {
 
               <p className="text-gray-600 mb-4 text-sm leading-relaxed">{service.description}</p>
 
-              <ul className="space-y-2 mb-6">
+              <ul className="space-y-2 mb-6 flex-grow">
                 {service.features.map((feature, idx) => (
                   <li key={idx} className="flex items-center gap-2 text-sm text-gray-600">
                     <FaCheckCircle className="text-primary text-xs flex-shrink-0" />
@@ -83,8 +49,8 @@ export default function Layanan() {
                 ))}
               </ul>
 
-              <a href="https://wa.me/6285859675459?text=Halo%20pak%2C%20saya%20ingin%20service" target="_blank" rel="noopener noreferrer"
-                className="w-full bg-primary hover:bg-primaryDark text-white font-semibold py-3 px-4 rounded-xl shadow-md hover:shadow-lg transition-all duration-300 transform hover:-translate-y-1 flex items-center justify-center gap-2">
+              <a href={waUrl} target="_blank" rel="noopener noreferrer"
+                className="mt-auto w-full bg-primary hover:bg-primaryDark text-white font-semibold py-3 px-4 rounded-xl shadow-md hover:shadow-lg transition-all duration-300 transform hover:-translate-y-1 flex items-center justify-center gap-2">
                 <FaWhatsapp className="text-xl" />
                 Pesan Sekarang
               </a>
@@ -94,7 +60,7 @@ export default function Layanan() {
 
         <div className="text-center mt-12">
           <p className="text-gray-600 mb-4">Butuh layanan lain? Hubungi kami untuk konsultasi gratis</p>
-          <a href="https://wa.me/6285859675459?text=Halo%20pak%2C%20saya%20ingin%20service" target="_blank" rel="noopener noreferrer"
+          <a href={waUrl} target="_blank" rel="noopener noreferrer"
             className="inline-flex items-center gap-2 bg-white border-2 border-primary text-primary hover:bg-primary hover:text-white font-semibold py-3 px-8 rounded-full shadow-md hover:shadow-lg transition-all duration-300 transform hover:-translate-y-1">
             <FaWhatsapp className="text-xl" />
             Konsultasi Gratis

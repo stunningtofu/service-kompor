@@ -1,0 +1,162 @@
+{
+  "seo": {
+    "title": "Pangestu Service | Servis Kompor Kediri",
+    "description": "Layanan servis kompor, LED, dan elektronik di Kediri. Pengalaman 3+ tahun.",
+    "keywords": "servis kompor, kediri, elektronik, reparasi",
+    "ogTitle": "Pangestu Service Kediri",
+    "ogDescription": "Servis kompor & elektronik profesional"
+  },
+  "contact": {
+    "whatsappNumber": "6285859675459",
+    "whatsappMessage": "Halo pak, saya ingin service",
+    "phoneDisplay": "+62 858-5967-5459",
+    "address": "Jalan Ronggo Warsito No.65, RT.002/RW.004, Dusun Pojok, Desa Sukorejo, Kabupaten Kediri, Jawa Timur 64181, Indonesia",
+    "mapEmbedUrl": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3952.840959715024!2d112.10307067578337!3d-7.806655477505406!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e785921df7d6edb%3A0x830861cd652bd3c2!2sPANGESTU%20Service%20Kompor%20Gas!5e0!3m2!1sen!2sid!4v1777394329871!5m2!1sen!2sid",
+    "mapUrl": "https://www.google.com/maps/place/PANGESTU+Service+Kompor+Gas/@-7.8066555,112.1030707,17z",
+    "hours": {
+      "weekday": "08:00 - 17:00 WIB",
+      "saturday": "08:00 - 15:00 WIB",
+      "sunday": "Tutup (Emergency call only)"
+    }
+  },
+  "header": {
+    "brandName": "Pangestu",
+    "brandHighlight": "Service",
+    "tagline": "Kediri • Profesional & Terpercaya",
+    "menu": [
+      { "label": "Beranda", "url": "#home" },
+      { "label": "Layanan", "url": "#layanan" },
+      { "label": "Cara Pesan", "url": "#carapesan" },
+      { "label": "Kontak & Lokasi", "url": "#kontak" }
+    ]
+  },
+  "hero": {
+    "badge": "Melayani Wilayah Kediri Raya",
+    "titlePart1": "Service Kompor, LED,",
+    "titleHighlight": "Elektronik",
+    "titlePart2": "& Pembuatan Nisan",
+    "description": "Panggilan ke rumah Anda di Kediri (Kota & Kabupaten) atau antar langsung ke tempat kami. Cepat, harga bersahabat, garansi servis, dan sudah berpengalaman 3+ tahun.",
+    "ctaWhatsApp": "Hubungi WhatsApp",
+    "ctaOrder": "Cara Pemesanan →",
+    "features": ["Service datang", "Antar barang", "Garansi servis"],
+    "experience": "3+ tahun Pengalaman",
+    "experienceSub": "Servis & Nisan di Kediri"
+  },
+  "services": [
+    {
+      "icon": "FaFire",
+      "title": "Service Kompor",
+      "description": "Kompor gas & listrik semua merek. Perbaikan burner, regulator, solenoid, dll.",
+      "features": ["Semua merek", "Garansi 3 bulan", "Service di rumah"]
+    },
+    {
+      "icon": "FaLightbulb",
+      "title": "Service Lampu LED",
+      "description": "Perbaikan lampu LED mati, redup, berkedip. Ganti driver, LED strip, dll.",
+      "features": ["LED rumah", "LED toko", "Garansi 6 bulan"]
+    },
+    {
+      "icon": "FaUtensils",
+      "title": "Service Rice Cooker",
+      "description": "Perbaikan rice cooker mati, tidak panas, tidak matang, dll.",
+      "features": ["Semua kapasitas", "Garansi 3 bulan", "Service di rumah"]
+    },
+    {
+      "icon": "FaFan",
+      "title": "Service Kipas Angin",
+      "description": "Perbaikan kipas angin mati, berisik, tidak berputar, dll.",
+      "features": ["Kipas dinding", "Kipas meja", "Garansi 3 bulan"]
+    },
+    {
+      "icon": "FaMicrochip",
+      "title": "Service Elektronik",
+      "description": "Perbaikan TV, radio, charger, power supply, dan elektronik lainnya.",
+      "features": ["Diagnosa gratis", "Sparepart tersedia", "Garansi servis"]
+    },
+    {
+      "icon": "FaFillDrip",
+      "title": "Pembuatan Nisan",
+      "description": "Custom nisan granit & marmer. Ukuran & desain sesuai permintaan.",
+      "features": ["Granit premium", "Marmer import", "Garansi 1 tahun"]
+    }
+  ],
+  "howToOrder": {
+    "title": "Cara Pemesanan",
+    "description": "Pilih cara yang paling sesuai dengan kebutuhan Anda. Semua layanan kami memberikan garansi servis dan konsultasi mudah.",
+    "options": [
+      {
+        "icon": "FaPhone",
+        "step": "1",
+        "title": "Panggilan ke Rumah",
+        "description": "Tim teknisi kami datang langsung ke rumah Anda di wilayah Kediri Raya. Cocok untuk service kompor, kipas, rice cooker, dan elektronik ringan.",
+        "features": ["Gratis ongkos panggil", "Service di tempat", "Estimasi waktu 1-2 jam"],
+        "popular": false
+      },
+      {
+        "icon": "FaTruck",
+        "step": "2",
+        "title": "Antar Barang ke Bengkel",
+        "description": "Anda antar barang ke bengkel kami. Cocok untuk service LED, elektronik berat, dan pembuatan nisan yang membutuhkan waktu lebih lama.",
+        "features": ["Diagnosa gratis", "Antar-jemput tersedia", "Garansi servis"],
+        "popular": true
+      },
+      {
+        "icon": "FaComments",
+        "step": "3",
+        "title": "Konsultasi WhatsApp",
+        "description": "Kirim foto kerusakan via WhatsApp untuk konsultasi awal. Kami berikan saran perbaikan dan estimasi servis sebelum Anda memutuskan.",
+        "features": ["Konsultasi gratis", "Estimasi servis", "Jawab cepat"],
+        "popular": false
+      }
+    ]
+  },
+  "kontak": {
+    "title": "Kontak & Lokasi",
+    "description": "Kunjungi bengkel kami atau hubungi untuk konsultasi gratis. Kami siap melayani Anda dengan profesional",
+    "testimonials": [
+      {
+        "name": "Bu Siti",
+        "location": "Kediri Kota",
+        "text": "Service kompornya cepat dan rapi. Sudah 3 tahun pakai jasa beliau, selalu puas. Harganya juga bersahabat.",
+        "rating": 5,
+        "service": "Service Kompor Gas"
+      },
+      {
+        "name": "Pak Budi",
+        "location": "Pare",
+        "text": "Membuat nisan untuk orang tua. Hasilnya bagus sekali, granitnya berkualitas. Prosesnya juga tidak terlalu lama.",
+        "rating": 5,
+        "service": "Pembuatan Nisan"
+      },
+      {
+        "name": "Ibu Rina",
+        "location": "Kota Pare",
+        "text": "Lampu LED rumah redup semua, sudah diperbaiki dengan baik. Sekarang terang kembali. Terima kasih Pak!",
+        "rating": 5,
+        "service": "Service Lampu LED"
+      }
+    ],
+    "faqs": [
+      {
+        "question": "Berapa lama waktu service?",
+        "answer": "Untuk service ringan (kompor, kipas) biasanya 1-2 jam. Service LED dan elektronik bisa 2-4 jam tergantung kerusakan."
+      },
+      {
+        "question": "Apakah ada garansi servis?",
+        "answer": "Ya, semua service kami memberikan garansi minimal 3 bulan. Untuk pembuatan nisan garansi 1 tahun."
+      },
+      {
+        "question": "Apakah sparepart tersedia?",
+        "answer": "Ya, kami menyediakan berbagai sparepart untuk kompor, LED, dan elektronik. Jika tidak ada, kami bisa pesan dengan waktu 1-2 hari."
+      },
+      {
+        "question": "Berapa biaya panggilan ke rumah?",
+        "answer": "Biaya panggilan ke rumah GRATIS untuk wilayah Kediri Kota. Untuk daerah sekitar ada biaya transport minimal Rp 25.000."
+      }
+    ]
+  },
+  "footer": {
+    "description": "Layanan panggilan ke rumah di **Kota & Kabupaten Kediri**. Tersedia antar-jemput perangkat. **Cepat, harga transparan, bergaransi**, dan telah dipercaya lebih dari 3 tahun.",
+    "copyrightName": "Pangestu Service"
+  }
+}

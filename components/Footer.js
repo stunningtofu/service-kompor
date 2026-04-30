@@ -1,3 +1,5 @@
+import siteData from '@/data/siteData.json'
+
 export default function Footer() {
   const year = new Date().getFullYear();
 
@@ -14,7 +16,7 @@ export default function Footer() {
         <small className="block mt-4">
           © {year}{' '}
           <a href="/" className="hover:text-primary transition-colors">
-            Pangestu Service
+            {siteData.footer.copyrightName}
           </a>
           . Seluruh hak cipta dilindungi undang-undang.
         </small>

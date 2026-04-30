@@ -1,6 +1,10 @@
-import { FaFire, FaLightbulb, FaUtensils, FaFan, FaMapMarkerAlt, FaCheckCircle, FaTools, FaMicrochip, FaFillDrip } from 'react-icons/fa'
+import { FaFire, FaLightbulb, FaUtensils, FaFan, FaMapMarkerAlt, FaCheckCircle, FaTools, FaMicrochip, FaFillDrip, FaWhatsapp } from 'react-icons/fa'
+import siteData from '@/data/siteData.json'
 
 export default function Hero() {
+  const { hero, contact } = siteData;
+  const waUrl = `https://wa.me/${contact.whatsappNumber}?text=${encodeURIComponent(contact.whatsappMessage)}`;
+
   return (
     <section id="home" className="relative overflow-hidden bg-gradient-to-br from-primaryLight via-white to-orange-50 py-16 md:py-24">
       {/* Dekorasi background */}
@@ -12,48 +16,48 @@ export default function Hero() {
           <div className="space-y-6">
             <div className="inline-flex items-center gap-2 hero-badge text-white px-4 py-2 rounded-full text-sm font-semibold shadow-lg">
               <FaMapMarkerAlt className="text-white text-xs" />
-              <span>Melayani Wilayah Kediri Raya</span>
+              <span>{hero.badge}</span>
             </div>
             <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-gray-800 leading-tight">
-              Service Kompor, LED,
-              <span className="text-primary relative inline-block">
-                Elektronik
+              {hero.titlePart1}
+              <span className="text-primary relative inline-block mx-2">
+                {hero.titleHighlight}
                 <svg className="absolute -bottom-2 left-0 w-full h-2 text-primary/30" viewBox="0 0 200 8" fill="currentColor">
                   <path d="M0,4 L200,4" stroke="currentColor" strokeWidth="4" strokeDasharray="6 4"/>
                 </svg>
               </span>
-              & Pembuatan Nisan
+              {hero.titlePart2}
             </h2>
-            <p className="text-gray-600 text-base sm:text-lg leading-relaxed">Panggilan ke rumah Anda di Kediri (Kota & Kabupaten) atau antar langsung ke tempat kami. Cepat, harga bersahabat, garansi servis, dan sudah berpengalaman 3+ tahun.</p>
+            <p className="text-gray-600 text-base sm:text-lg leading-relaxed">{hero.description}</p>
             <div className="flex flex-col sm:flex-row flex-wrap gap-3 pt-3">
               <a
-                href="https://wa.me/6285859675459?text=Halo%20pak%2C%20saya%20ingin%20service"
+                href={waUrl}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex min-h-[44px] items-center justify-center rounded-xl bg-primary px-6 py-3 text-center text-white font-bold shadow-lg transition-all duration-300 hover:bg-primaryDark focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2"
               >
-                <FaUtensils className="text-xl" />
-                Hubungi WhatsApp
+                <FaWhatsapp className="text-xl mr-2" />
+                {hero.ctaWhatsApp}
               </a>
               <a
                 href="#carapesan"
                 className="inline-flex min-h-[44px] items-center justify-center rounded-xl border-2 border-primary px-6 py-3 text-center text-primary font-semibold transition-all duration-300 hover:bg-primary/10"
               >
-                Cara Pemesanan →
+                {hero.ctaOrder}
               </a>
             </div>
             <div className="flex flex-wrap items-center gap-5 pt-4">
               <div className="flex items-center gap-2 bg-white/70 backdrop-blur-sm px-4 py-2 rounded-full shadow-sm">
                 <FaCheckCircle className="text-primary text-lg" />
-                <span className="text-sm font-medium">Service datang</span>
+                <span className="text-sm font-medium">{hero.features[0]}</span>
               </div>
               <div className="flex items-center gap-2 bg-white/70 backdrop-blur-sm px-4 py-2 rounded-full shadow-sm">
                 <FaCheckCircle className="text-primary text-lg" />
-                <span className="text-sm font-medium">Antar barang</span>
+                <span className="text-sm font-medium">{hero.features[1]}</span>
               </div>
               <div className="flex items-center gap-2 bg-white/70 backdrop-blur-sm px-4 py-2 rounded-full shadow-sm">
                 <FaTools className="text-primary text-lg" />
-                <span className="text-sm font-medium">Garansi servis</span>
+                <span className="text-sm font-medium">{hero.features[2]}</span>
               </div>
             </div>
           </div>
@@ -100,8 +104,8 @@ export default function Hero() {
                 </div>
               </div>
               <div className="mt-6 text-center">
-                <p className="text-primary font-bold text-lg">3+ tahun Pengalaman</p>
-                <p className="text-xs text-gray-500">Servis & Nisan di Kediri</p>
+                <p className="text-primary font-bold text-lg">{hero.experience}</p>
+                <p className="text-xs text-gray-500">{hero.experienceSub}</p>
               </div>
             </div>
           </div>
